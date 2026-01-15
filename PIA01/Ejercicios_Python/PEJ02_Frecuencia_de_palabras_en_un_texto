@@ -1,0 +1,28 @@
+lista = ["python", "codigo", "programa", "datos", "funcion"]
+rutaFichero = "texto.txt"
+
+def contarPalabras(lista, rutaFichero):
+    with open(rutaFichero, 'r') as f:
+        texto = f.read()
+    
+    texto = texto.lower()
+
+    textoLimpio = ''
+    for caracter in texto:
+        if caracter.isalnum() or caracter.isspace():
+            textoLimpio += caracter
+    
+    palabrasTexto = textoLimpio.split()
+
+    frecuencias = {}
+    for palabra in palabrasTexto:
+         if palabra in lista:
+            if palabra in frecuencias:
+                frecuencias[palabra] += 1
+            else:
+                frecuencias[palabra] = 1
+
+    return frecuencias
+
+frecuencias = contarPalabras(lista, rutaFichero)
+print(frecuencias)

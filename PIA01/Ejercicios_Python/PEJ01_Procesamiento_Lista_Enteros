@@ -1,0 +1,19 @@
+lista = [4, -1, 2, 4, 3, -5, 2]
+
+def listaEnteros(lista):
+  listaSinNegativos = []
+
+  print("Lista de enteros completa: ", lista)
+  
+  for numero in lista:
+    if numero >= 0:
+      listaSinNegativos.append(numero)
+  
+  print("Lista sin negativos: ", listaSinNegativos)
+
+  listaSinDuplicados = set(listaSinNegativos)
+  listaFinal = sorted(listaSinDuplicados)
+  
+  return print("Lista sin duplicados", listaFinal)
+
+listaEnteros(lista)

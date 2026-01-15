@@ -1,0 +1,25 @@
+lista1 = [1, 2, 3, 4]
+lista2 = [3, 4, 5, 6]
+
+
+def fconjuntos(lista1,lista2):
+
+    conjunto1 = set(lista1)
+    conjunto2 = set(lista2)
+
+    # print(conjunto1.intersection(conjunto2))
+    # print(conjunto1.union(conjunto2))
+    # print(conjunto1.symmetric_difference(conjunto2))
+
+    cInterseccion = conjunto1 & conjunto2
+    cUnion = conjunto1 | conjunto2
+    cDiferenciaSimetrica = conjunto1 ^ conjunto2
+
+    return {
+        'Interseccion ': cInterseccion,
+        'Union ': cUnion,
+        "Diferencia Simetrica ": cDiferenciaSimetrica
+    }
+
+conjuntos = fconjuntos(lista1, lista2)
+print(conjuntos)

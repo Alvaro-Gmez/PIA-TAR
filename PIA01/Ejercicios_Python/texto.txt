@@ -1,0 +1,4 @@
+Python es un lenguaje muy usado para escribir codigo.
+Un buen programa en Python organiza el codigo en funciones.
+Cuando trabajamos con datos, cada funcion del programa cumple una tarea.
+El codigo claro hace que el programa sea mas facil de entender.
